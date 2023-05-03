@@ -5,16 +5,16 @@ on:
       - opened
     branches:
       - main
-      - "dev-*"
-      - "feat/**"
+      - 'dev-*' #dev-new or dev-one
+      - 'feat/**'
   workflow_dispatch:
   push:
     branches:
       - main
-      - "dev-*" #dev-new or dev-one
-      - "feat/**"
+      - 'dev-*' #dev-new or dev-one
+      - 'feat/**'
     paths-ignore:
-      - ".github/workflows/*" # ignore run this event if change file in that path
+      - '.github/workflows/*' # ignore run this event if change file in that path
 jobs:
   deploy:
     runs-on: ubuntu-latest
